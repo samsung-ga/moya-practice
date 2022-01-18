@@ -3,4 +3,4 @@
 </p>
 <br />
 
-moya 라이브러리를 사용한 네트워킹 연습하기{: .text-center }
+<h2 align="center"> moya 라이브러리를 이용하여 네트워킹 연습하기 </h2>
