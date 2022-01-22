@@ -8,7 +8,6 @@
 import UIKit
 import RxSwift
 import RxCocoa
-import RxDataSources
 
 class ViewController: BaseViewController<ViewModel> {
     let disposeBag = DisposeBag()

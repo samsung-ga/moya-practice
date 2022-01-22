@@ -22,6 +22,28 @@ class ViewModel: BaseViewModel {
         return indicator
     }()
     
+    lazy var provider = MoyaProvider<GithubAPI>() //(plugins: [activity, NetworkLogging()])
+    
+    func requestRepository(userID: String) {
+        _requestRepository(userID: userID)
+            .subscribe(onSuccess: { [weak self] in
+                self?.repositoryDatas.accept($0)
+            })
+            .disposed(by: disposeBag)
+    }
+    
+    private func _requestRepository(userID: String) -> Single<[RepositoryModel]> {
+        return provider.rx.request(.getRepositorByUserID(userID))
+            .flatMap { response in
+                do {
+                    return .just(try response.map([RepositoryModel].self))
+                } catch(let err) {
+                    print(err.localizedDescription)
+                    fatalError()
+                }
+            }
+    }
+    
     private lazy var activity = NetworkActivityPlugin { change, target in
         print(target)
         switch change {
@@ -36,28 +58,5 @@ class ViewModel: BaseViewModel {
         }
     }
     
-    lazy var provider = MoyaProvider<GithubAPI>(session: DSesssion()) //(plugins: [activity, NetworkLogging()])
-    
-    func requestRepository(userID: String) {
-        _requestRepository(userID: userID)
-            .subscribe(onSuccess: { [weak self] in
-                self?.repositoryDatas.accept($0)
-            })
-            .disposed(by: disposeBag)
-    }
-    
-    private func _requestRepository(userID: String) -> Single<[RepositoryModel]> {
-        return provider.rx.request(.getRepositorByUserID(userID))
-            .debug()
-            .flatMap { response in
-                do {
-                    return .just(try response.map([RepositoryModel].self))
-                } catch(let err) {
-                    print(err.localizedDescription)
-                    fatalError()
-                }
-            }
-    }
-
     
 }
