@@ -34,10 +34,33 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rWD-U8-YKf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="787"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="UP1-Md-w4o"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="zJc-5R-g4e"/>
-                                </connections>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" id="g8P-0B-6no" customClass="TableViewCell" customModule="RxMoya_MVVM" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="g8P-0B-6no" id="s7Y-T1-4t1">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oqt-jj-Dli">
+                                                    <rect key="frame" x="20" y="11" width="374" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="oqt-jj-Dli" firstAttribute="leading" secondItem="s7Y-T1-4t1" secondAttribute="leadingMargin" id="Fta-Ly-kku"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="oqt-jj-Dli" secondAttribute="bottom" id="JQr-lg-qXc"/>
+                                                <constraint firstItem="oqt-jj-Dli" firstAttribute="top" secondItem="s7Y-T1-4t1" secondAttribute="topMargin" id="jiZ-L8-NzD"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="oqt-jj-Dli" secondAttribute="trailing" id="nWl-BH-HTC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="oqt-jj-Dli" id="TIf-Y6-2v7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B0i-js-9DO">
                                 <rect key="frame" x="0.0" y="831" width="414" height="31"/>

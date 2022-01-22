@@ -24,19 +24,25 @@ class ViewController: BaseViewController<ViewModel> {
     }
     
     private func setupRepositoryButton() {
-        
+        repositoryButton.rx.tap
+            .bind(onNext: { [weak self] _ in
+                guard let self = self else { return }
+                self.viewModel.requestRepository(userID: "wody27")
+            })
+            .disposed(by: disposeBag)
     }
     
     private func seupTableView() {
-        tableView.register(TableViewCell.self, forCellReuseIdentifier: "TableViewCell")
         viewModel.repositoryDatas
             .bind(to: tableView.rx.items(cellIdentifier: "TableViewCell",
                                          cellType: TableViewCell.self)) { row, cellModel, cell in
-                
+                cell.nameLabel.text = cellModel.name
             }.disposed(by: disposeBag)
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
+        
     }
     
+   
 }
 
 extension ViewController: UITableViewDelegate {
