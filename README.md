@@ -13,7 +13,7 @@
 <h3> 🚀 Study </h3>
 
 | 주제                                      | 내용                                               |
-| ----------------------------------------- | -------------------------------------------------- |
+| -------------------------------------------------------- | -------------------------------------------------- |
 | [Moya란?](https://wodyios.tistory.com/23) | Moya와 Alamofire의 차이, 구성 요소 3가지 |
 | [Basic Use](https://github.com/wody27/moya-practice/blob/main/Docs/BasicUse.md)                             | GithubAPI를 이용한 네트워크 통신                         |
 | [RxMoya + MVVM](https://github.com/wody27/moya-practice/blob/main/Docs/RxMoya+MVVM.md)                         | GithubAPI를 이용한 네트워크 통신 (RxMoya + MVVM)         |
