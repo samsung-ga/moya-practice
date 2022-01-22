@@ -1,6 +1,6 @@
 # Moya Practice
 <p align="center">
-  <img src="https://github.com/Moya/Moya/blob/master/web/logo_github.png?raw=true" width="500"/>
+  <img src="https://github.com/Moya/Moya/blob/master/web/logo_github.png?raw=true" width="200"/>
 </p>
 <br />
 <h4 align="center"> 👼🏻 moya 라이브러리를 이용하여 네트워킹 연습하기 </h3>
