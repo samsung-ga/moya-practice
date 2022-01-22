@@ -32,6 +32,7 @@
 		D437094C279941870058B5DD /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = D437094B279941870058B5DD /* RxDataSources */; };
 		D437094E279BD4F70058B5DD /* NetworkLoggin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437094D279BD4F70058B5DD /* NetworkLoggin.swift */; };
 		D4370950279BD70E0058B5DD /* DSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437094F279BD70E0058B5DD /* DSession.swift */; };
+		D4370959279BEFA10058B5DD /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4370958279BEFA10058B5DD /* NetworkProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		D437094627992BE10058B5DD /* RepositoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryModel.swift; sourceTree = "<group>"; };
 		D437094D279BD4F70058B5DD /* NetworkLoggin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggin.swift; sourceTree = "<group>"; };
 		D437094F279BD70E0058B5DD /* DSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSession.swift; sourceTree = "<group>"; };
+		D4370958279BEFA10058B5DD /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				D403AE0D2797E3CB005731FF /* RxMoya+.swift */,
 				D437094D279BD4F70058B5DD /* NetworkLoggin.swift */,
 				D437094F279BD70E0058B5DD /* DSession.swift */,
+				D4370958279BEFA10058B5DD /* NetworkProvider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				D437094727992BE10058B5DD /* RepositoryModel.swift in Sources */,
 				D437094E279BD4F70058B5DD /* NetworkLoggin.swift in Sources */,
 				D403AE1F2797E56B005731FF /* TableViewCell.swift in Sources */,
+				D4370959279BEFA10058B5DD /* NetworkProvider.swift in Sources */,
 				D403AE0E2797E3CB005731FF /* RxMoya+.swift in Sources */,
 				D437094427992A060058B5DD /* TestViewController.swift in Sources */,
 				D403AE162797E498005731FF /* UIView+.swift in Sources */,

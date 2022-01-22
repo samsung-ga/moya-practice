@@ -57,3 +57,28 @@ lazy var provider = MoyaProvider<GithubAPI>(plugins: [NetworkLogging()])
 2. 마찬가지로, `MoyaProvider`을 생성할 때 plugins에 추가해줍니다.
 
 👉 [Sources/Moya/Plugins/NetworkLoggerPlugin.swift](https://github.com/Moya/Moya/blob/master/Sources/Moya/Plugins/NetworkLoggerPlugin.swift)
+
+# SessionManager 사용해보기
+
+<img src="https://user-images.githubusercontent.com/56102421/150630030-bf18f243-4ec0-4cc3-ab82-3bf6ad240881.png" style="zoom:20%;" />
+
+> `MoyaProvider`를 init할 때, SessionManager 인스턴스를 넘겨주세요. 
+
+```swift
+import Moya 
+// 선언
+class CustomSesssion: Session {
+    static let shared: CustomSesssion = {
+        let configuration = URLSessionConfiguration.default
+        configuration.timeoutIntervalForRequest  = 30
+        configuration.timeoutIntervalForResource = 30
+        configuration.requestCachePolicy         = .useProtocolCachePolicy
+        return CustomSesssion(configuration: configuration)
+    }()
+}
+
+// 사용
+let provider = MoyaProvider<GithubAPI>(session: CustomSesssion())
+```
+
+CustomSession을 만들고 `MoyaProvider` init시 위와 같이 적용할 수 있습니다.

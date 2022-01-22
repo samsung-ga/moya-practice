@@ -22,7 +22,8 @@ class ViewModel: BaseViewModel {
         return indicator
     }()
     
-    lazy var provider = MoyaProvider<GithubAPI>() //(plugins: [activity, NetworkLogging()])
+    lazy var provider = MoyaProvider<GithubAPI>(stubClosure: MoyaProvider.delayedStub(4), session: DSesssion())
+    lazy var networkProvider = NetworkProvider<GithubAPI>(stubClosure: MoyaProvider.immediatelyStub)
     
     func requestRepository(userID: String) {
         _requestRepository(userID: userID)
@@ -36,6 +37,7 @@ class ViewModel: BaseViewModel {
         return provider.rx.request(.getRepositorByUserID(userID))
             .flatMap { response in
                 do {
+                    print(response)
                     return .just(try response.map([RepositoryModel].self))
                 } catch(let err) {
                     print(err.localizedDescription)
