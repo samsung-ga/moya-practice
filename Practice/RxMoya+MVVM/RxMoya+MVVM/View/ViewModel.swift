@@ -26,7 +26,8 @@ class ViewModel: BaseViewModel {
     lazy var networkProvider = NetworkProvider<GithubAPI>(stubClosure: MoyaProvider.immediatelyStub)
     
     func requestRepository(userID: String) {
-        _requestRepository(userID: userID)
+        let api = GithubAPI.getRepositorByUserID(userID)
+        NetworkManager.request(api)
             .subscribe(onSuccess: { [weak self] in
                 self?.repositoryDatas.accept($0)
             })

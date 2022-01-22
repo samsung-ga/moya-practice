@@ -33,6 +33,7 @@
 		D437094E279BD4F70058B5DD /* NetworkLoggin.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437094D279BD4F70058B5DD /* NetworkLoggin.swift */; };
 		D4370950279BD70E0058B5DD /* DSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437094F279BD70E0058B5DD /* DSession.swift */; };
 		D4370959279BEFA10058B5DD /* NetworkProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4370958279BEFA10058B5DD /* NetworkProvider.swift */; };
+		D437098C279C06360058B5DD /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D437098B279C06360058B5DD /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		D437094D279BD4F70058B5DD /* NetworkLoggin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLoggin.swift; sourceTree = "<group>"; };
 		D437094F279BD70E0058B5DD /* DSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DSession.swift; sourceTree = "<group>"; };
 		D4370958279BEFA10058B5DD /* NetworkProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkProvider.swift; sourceTree = "<group>"; };
+		D437098B279C06360058B5DD /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 				D403AE012797DE9C005731FF /* GithubService */,
 				D403AE0B2797E37E005731FF /* API.swift */,
 				D403AE0D2797E3CB005731FF /* RxMoya+.swift */,
+				D437098B279C06360058B5DD /* NetworkManager.swift */,
 				D437094D279BD4F70058B5DD /* NetworkLoggin.swift */,
 				D437094F279BD70E0058B5DD /* DSession.swift */,
 				D4370958279BEFA10058B5DD /* NetworkProvider.swift */,
@@ -253,6 +256,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D437098C279C06360058B5DD /* NetworkManager.swift in Sources */,
 				D437093B279923F10058B5DD /* BaseViewController.swift in Sources */,
 				D4370950279BD70E0058B5DD /* DSession.swift in Sources */,
 				D43709402799295B0058B5DD /* SceneDelegate.swift in Sources */,
